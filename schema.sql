@@ -1,0 +1,10 @@
+DROP TABLE IF EXISTS keys;
+
+CREATE TABLE keys (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    key_string TEXT NOT NULL UNIQUE,
+    is_active BOOLEAN NOT NULL DEFAULT 1,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    redeemed_at TIMESTAMP,
+    redeemed_by TEXT
+);
